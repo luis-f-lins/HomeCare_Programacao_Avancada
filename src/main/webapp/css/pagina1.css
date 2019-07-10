@@ -1,0 +1,28 @@
+.block {
+  display: block;
+  width: 80%;
+  border: none;
+  background-color: rgba(0,0,100,0.5);
+  padding: 50px 28px 50px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  color:white;
+  border: 2px solid rgba(0,0,50,1);
+  border-radius: 0.6em;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+.block:hover {
+    background-color: rgba(0,0,100,0.7);
+}
+body{
+            background-image: url("https://static1.squarespace.com/static/5b899f9f12b13f368e13e6d5/t/5b89ae4b70a6ad81f19142b3/1535749709731/1*aEvXFlMOEqz_8Gh34nJC2A.jpg?format=2500w");
+        }
+        
+        h1{
+            font-size:48px; 
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }

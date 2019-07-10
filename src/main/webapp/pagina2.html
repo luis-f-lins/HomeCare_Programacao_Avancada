@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Temperatura e Umidade</title>
+        <link rel="stylesheet" type="text/css" href="css/pagina2.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+        <script type="text/javascript" src="js/ajaxComBibliotecaJSON.js"></script>
+        <script type="text/javascript" src="js/d3.v4.min.js">
+            
+    </script>
+    </head>
+    
+    <body onload="start();">
+        <center>
+        <br>
+        <br>
+        <h1 style="font-size:48px;">Tabela de Temperatura e Umidade</h1>
+        <br>
+        
+
+        <form method="GET" action="controller" accept-charset="UTF-8">
+            <input type="hidden"
+                   name="nomeDoTratadorDePagina"
+                   value="mvc.pagehandlers.Tratador_pagina2_jsp" />
+            <input type="hidden"
+                   name="form"
+                   value="form1" />
+            <table>
+                <tr>
+                    <td>
+            Medidor:
+            <select name="medidor" id="listamedidores" >
+            
+            </select>
+                    </td>
+<!--            <BR>-->
+            <td id="datafinal">
+                
+<!--            <br>-->
+            </td>
+            <td>
+            Período:
+            <select name="periodo">
+                <option value="year">Ano</option>
+                <option value="month">Mês</option>
+                <option value="week">Semana</option>
+                <option value="day">Dia</option>
+            </select>
+            </td>
+            
+            <td>
+            <input type="Radio" name="datatype" id="tabela" value="table" checked>Tabela
+            <br>
+            <input type="Radio" name="datatype" id="grafico" value="graphics">Gráfico
+            </td>
+            
+            <td>
+            Man.<input type="radio" name="tipoleitura" id="man" value="MAN" checked/>
+                        &nbsp;&nbsp;
+                        <input type="radio" name="tipoleitura" id="aut" value="AUT"/>Autom.
+            </td>
+            
+                </tr>
+            </table>
+            <br>
+            <INPUT TYPE="button" id="exibir" value="EXIBIR" onclick="fazerPedidoAJAXMedidas(datetime,medidor,periodo)">
+            <INPUT TYPE="button" value="EDITAR MEDIDORES" onclick="fazerPedidoAJAXMedidores()">
+        </FORM>
+        <BR>
+        
+        
+        <form method="GET" action="controller">
+            <input type="hidden"
+                   name="nomeDoTratadorDePagina"
+                   value="mvc.pagehandlers.Tratador_pagina2_jsp" />
+            <input type="hidden"
+                   name="form"
+                   value="form2" />
+            
+            <input type="Submit" value="VOLTAR">
+        </form>
+        <br>
+        
+        <br>
+        
+        <table id="medidas" >
+<tr>
+
+</tr>
+
+        </table>
+        
+        <div id="graficomedidas">
+            
+        </div>
+        
+        <div id="medidores">
+            
+            <div id="botaomedidores"></div>
+            <br>
+            <table id="tabelamedidores">
+                
+            </table>
+            <br>
+        </div>
+        
+        </center>
+    </body>
+</html>

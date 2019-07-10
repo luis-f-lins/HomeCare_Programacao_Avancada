@@ -1,0 +1,43 @@
+        table {
+            border: 1px solid white; 
+            border-collapse: collapse;
+            color:white;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        
+        td {
+            border: 1px solid white; 
+            border-collapse: collapse; 
+            padding: 15px;
+            text-align: center;
+        }
+        
+        #tablehead {
+            background-color: rgba(0,0,100,0.8);
+        }
+        
+        .tablebody {
+            background-color: rgba(0,0,50,0.8);
+        }
+        
+        body{
+            background-image: url("https://static1.squarespace.com/static/5b899f9f12b13f368e13e6d5/t/5b89ae4b70a6ad81f19142b3/1535749709731/1*aEvXFlMOEqz_8Gh34nJC2A.jpg?format=2500w");
+            background-attachment:fixed;
+	    overflow:scroll;
+        }
+        
+        h1{
+            font-size:48px; 
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        
+        p{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        
+        .grafico{
+            background-color:white;
+        }

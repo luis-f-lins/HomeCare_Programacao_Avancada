@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>XPTO</servlet-name>
+        <servlet-class>mvc.Controller</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>XPTO</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ControllerMedidas</servlet-name>
+        <servlet-class>mvc.ControllerMedidas</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ControllerMedidas</servlet-name>
+        <url-pattern>/controllerMedidas</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ControllerMedidores</servlet-name>
+        <servlet-class>mvc.ControllerMedidores</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ControllerMedidores</servlet-name>
+        <url-pattern>/controllerMedidores</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Leitura</servlet-name>
+        <servlet-class>simulator.Leitura</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Leitura</servlet-name>
+        <url-pattern>/leitura</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>pagina1.html</welcome-file>
+    </welcome-file-list>
+    
+    <filter>
+  <filter-name>setCharacterEncodingFilter</filter-name>
+  <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+  <init-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </init-param>
+</filter>
+
+<filter-mapping>
+  <filter-name>setCharacterEncodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html;charset=UTF-8</mime-type>
+     </mime-mapping>
+    
+</web-app>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/HomeCare_Maven">
+  <Resource auth="Container" driverClassName="org.postgresql.Driver" logAbandoned="false" maxTotal="10000" name="jdbc/nomeDeFantasia" password="tempumidade" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:postgresql://127.0.0.1:5432/tempumidade" username="tempumidade"/>
+</Context>
